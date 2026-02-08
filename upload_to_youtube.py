@@ -8,6 +8,14 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload, MediaFileUpload
 
+# --------- CREATE CREDS FILES FROM ENV ---------
+if not os.path.exists("service_account.json"):
+    with open("service_account.json", "w") as f:
+        f.write(os.environ["SERVICE_ACCOUNT_JSON"])
+
+if not os.path.exists("client_secret.json"):
+    with open("client_secret.json", "w") as f:
+        f.write(os.environ["CLIENT_SECRET_JSON"])
 # ================= CONFIG =================
 SHEET_URL = "https://docs.google.com/spreadsheets/d/1P-_ljZFeGteadqIiPX0_rXj3NWRLxJcHcOGoxVms2WU/edit#gid=0"
 
