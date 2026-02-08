@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# Secrets
+service_account.json
+client_secret.json
+yt_token.pickle
+
+# Temp files
+video.mp4
